@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript3</title>
+    
+    <script>
+
+   // Função para ler um número digitado pelo usuário
+function lerNumero(mensagem) {
+  var numero = parseFloat(prompt(mensagem));// parsefloat diversifica entre escrita , numeros quebrados , numeros.
+  return numero;
+}
+
+// Lê os 3 valores informados pelo usuário
+
+var valor1 =  lerNumero("Digite o primeiro valor:");
+var valor2 =  lerNumero("Digite o segundo valor:");
+var valor3 =  lerNumero("Digite o terceiro valor:");
+
+// Verifica qual é o maior valor
+var maiorValor = Math.max(valor1, valor2, valor3);
+
+// Calcula a soma dos 2 maiores valores
+var somaDosMaiores = 0;
+
+if (valor1 === maiorValor) {
+  somaDosMaiores = valor1 + Math.max(valor2, valor3);
+} else if (valor2 === maiorValor) {
+  somaDosMaiores = valor2 + Math.max(valor1, valor3);
+} else { // nao possui comparação !
+  somaDosMaiores = valor3 + Math.max(valor1, valor2);
+}
+
+// Exibe a soma dos 2 maiores valores
+alert("Primeiro valor: " + valor1);
+alert("Último valor: " + valor4);
+alert("Maior valor: " + maiorValor);
+
+
+    </script>
+    
+</body>
+</html>

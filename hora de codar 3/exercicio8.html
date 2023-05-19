@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>]
+
+<script>
+    // Solicita o valor N ao usuário
+var N = parseInt(prompt("Digite um valor N maior que zero:"));
+
+// Verifica se o valor N é válido
+while (N <= 0 || isNaN(N)) {
+  N = parseInt(prompt("Valor inválido! Digite um valor N maior que zero:"));
+}
+
+// Imprime os valores inteiros entre 1 e N
+alert("Valores inteiros entre 1 e " + N + ":");
+
+for (var i = 1; i <= N; i++) {
+  alert(i);
+}
+
+</script>
+<body>
+    
+</body>
+</html>

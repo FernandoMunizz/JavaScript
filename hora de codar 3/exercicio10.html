@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    // Solicita o valor N ao usuário
+var N = parseInt(prompt("Digite um valor N:"));
+
+// Verifica se o valor N é válido
+while (N <= 0 || isNaN(N)) {
+  N = parseInt(prompt("Valor inválido! Digite um valor N:"));
+}
+
+// Imprime as tabuadas de 1 a N
+alert("Tabuadas de 1 a " + N + ":");
+
+for (var i = 1; i <= N; i++) {
+  alert("Tabuada do " + i + ":");
+
+  for (var j = 1; j <= 10; j++) {
+    alert(i + " x " + j + " = " + (i * j));
+  }
+
+  alert("---------------------");
+}
+
+</script>
+<body>
+    
+</body>
+</html>

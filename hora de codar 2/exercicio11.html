@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function calcularOperacao(valor1, valor2, operacao) {
+  let resultado;
+
+  switch (operacao) {
+    case 1: // Adição
+      resultado = valor1 + valor2;
+      break;
+    case 2: // Subtração
+      resultado = valor1 - valor2;
+      break;
+    case 3: // Divisão
+      resultado = valor1 / valor2;
+      break;
+    case 4: // Multiplicação
+      resultado = valor1 * valor2;
+      break;
+    default:
+      console.log("Operação inválida. Utilize 1 para adição, 2 para subtração, 3 para divisão ou 4 para multiplicação.");
+      return;
+  }
+
+  return resultado;
+}
+
+// Exemplo de uso:
+const valor1 = parseInt(prompt("Digite o primeiro valor:"));
+const valor2 = parseInt(prompt("Digite o segundo valor:"));
+const operacao = parseInt(prompt("Digite o código da operação (1: Adição, 2: Subtração, 3: Divisão, 4: Multiplicação):"));
+
+const resultado = calcularOperacao(valor1, valor2, operacao);
+
+alert("O resultado da operação é:", resultado);
+
+</script>
+<body>
+    
+</body>
+</html>

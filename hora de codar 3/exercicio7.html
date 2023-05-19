@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var notas = [];
+var notasValidas = false;
+
+while (!notasValidas) {
+  // Solicita as notas ao usuário
+  for (var i = 1; i <= 6; i++) {
+    var nota = parseFloat(prompt("Digite a nota " + i + ":"));
+    
+    // Verifica se a nota é válida
+    while (nota < 0 || nota > 10 || isNaN(nota)) {
+      nota = parseFloat(prompt("Nota inválida! Digite uma nota entre 0 e 10:"));
+    }
+    
+    // Adiciona a nota ao array de notas
+    notas.push(nota);
+  }
+
+  // Verifica se todas as notas são válidas
+  if (notas.length === 6) {
+    notasValidas = true;
+  } else {
+    alert("Erro: você deve informar 6 notas!");
+    notas = [];
+  }
+}
+
+// Calcula a média simples
+var soma = 0;
+for (var j = 0; j < notas.length; j++) {
+  soma += notas[j];
+}
+var media = soma / notas.length;
+
+// Imprime a média
+alert("A média do aluno é: " + media.toFixed(2));
+
+</script>
+<body>
+    
+</body>
+</html>
